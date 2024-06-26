@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;700;1000&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    padding-top: 85px;
+    margin:0;    
+}
+
+.header {
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Media queries para tabletas y móviles */
+@media (max-width: 1024px) {
+    .header .logo img {
+        height: 150px; /* Reducir tamaño del logo */
+    }
+
+    .header .nav-links img {
+        width: 180px; /* Reducir tamaño de los iconos del menú */
+    }
+
+    .header .btn button {
+        padding: 80px 120px; /* Ajustar tamaño del botón de contacto */
+    }
+
+    .main-content {
+        padding: 0 5%; /* Reducir el padding lateral */
+    }
+
+    .text-content h1 {
+        font-size: 3rem; /* Reducir tamaño del título */
+    }
+
+    .image-content img {
+        max-width: 100%; /* Ajustar imágenes al ancho del contenedor */
+    }
+
+    .cards .card {
+        width: 100%; /* Cards ocupan todo el ancho en dispositivos pequeños */
+    }
+
+    .contact {
+        width: 90%; /* Ajustar ancho del bloque de contacto */
+        padding: 1rem; /* Reducir padding en dispositivos pequeños */
+    }
+
+    .contact .contact-image img {
+        max-width: 100%; /* Ajustar tamaño de la imagen de contacto */
+    }
+}
+
+@media (max-width: 768px) {
+    .header .nav-links {
+        gap: 20px; /* Reducir espacio entre íconos del menú */
+    }
+
+    .header .btn button {
+        padding: 60px 100px; /* Ajustar tamaño del botón de contacto */
+    }
+
+    .main-content {
+        padding: 0 3%; /* Reducir el padding lateral */
+    }
+
+    .text-content h1 {
+        font-size: 2.5rem; /* Reducir tamaño del título */
+    }
+
+    .cards .card {
+        width: 100%; /* Cards ocupan todo el ancho en dispositivos pequeños */
+    }
+
+    .contact {
+        width: 100%; /* Ajustar ancho del bloque de contacto */
+    }
+
+    .contact .contact-image img {
+        max-width: 100%; /* Ajustar tamaño de la imagen de contacto */
+    }
+}
+
+.header .logo img {
+    height: auto;
+    max-height: 60px;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Permitir envolver en pantallas pequeñas */
+    justify-content: center; /* Centrar íconos del menú */
+    gap: 10px; /* Espacio entre íconos del menú */
+}
+
+.header .nav-links img {
+    width: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header .btn button {
+    padding: 20px 30px; /* Ajustar tamaño del botón de contacto */
+}
+
+.header .btn button {
+    padding: 20px 30px;
+    background: url('img/contact-removebg-preview.png') no-repeat center center;
+    background-size: cover;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) 
+    .header {
+        padding: 5px 5%; /* Reducir padding horizontal */
+    }
+
+    .header .nav-links {
+        flex-direction: column; /* Alinear íconos del menú en columna */
+        align-items: center; /* Centrar íconos del menú */
+        gap: 5px; /* Espacio entre íconos del menú */
+        overflow: hidden; /* Ocultar desbordamiento */
+        background-color: #333; /* Color de fondo */
+        position: absolute; /* Posición absoluta */
+        top: 85px; /* Distancia de 85px desde arriba */
+        width: 100%; /* Ancho completo */
+        left: -100%; /* Invisible de lado */
+        transition: 0.5s; /* Duración */
+    font-size: 0. 5rem;
+.header .btn button:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column; /* Changed to column to stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 0 5%;
+    margin-top: 85px; /* Adjust for header height */
+}
+
+.text-content {
+    text-align: center; /* Center text content */
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+}
+
+.text-content p {
+    font-size: 1.2rem;
+}
+
+.image-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Espacio entre imágenes */
+    margin-bottom: 2rem;
+}
+
+.image-content img {
+    width: 100%;
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-content img:hover {
+    transform: scale(1.05);
+}
+
+.text-content button.btn-primary {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.text-content button.btn-primary:hover {
+    background-color: #ddd;
+}
+
+.additional-text {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.cards {
+    text-align: center; /* Centra el contenido horizontalmente */
+    margin: 2rem 0;
+}
+
+.cards h2 {
+    margin-bottom: 1rem; /* Espacio inferior entre el título y las imágenes */
+     font-size: 190%;
+}
+
+.card {
+    background-color: #444;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    width: 30%;
+    margin: 0 auto; /* Centra los cards horizontalmente */
+    display: inline-block; /* Para que los cards estén en línea */
+    vertical-align: top; /* Alineación vertical arriba */
+}
+
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.cards .card {
+    width: 90%; /* Ajustar ancho de los cards */
+    max-width: 400px; /* Limitar ancho máximo */
+    margin: 0 auto 2rem; /* Centrar y añadir margen inferior */
+}
+
+
+/* New Styles: Contact */
+.contact {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 90%;
+    margin: 2rem auto;
+    text-align: center;
+    overflow: hidden; /* Para evitar que la imagen sobresalga */
+}
+
+.contact h2 {
+    margin-bottom: 1rem;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between; /* Coloca los elementos a los extremos */
+    align-items: center; /* Centra verticalmente los elementos */
+}
+
+.contact-text {
+    text-align: center; /* Alinea el texto a la izquierda */
+    max-width: 100%; /* Limita el ancho máximo del texto */
+    margin-right: 2rem; /* Margen a la derecha para separar del botón */
+}
+
+.contact p {
+    margin-bottom: 0.5rem; /* Espaciado inferior más pequeño para los párrafos */
+}
+
+.contact .whatsapp-button {
+    padding: 15px 30px;
+    background-color: #25D366;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+    width: 100%; /* Hace que el botón ocupe todo el ancho disponible */
+    max-width: 300px; /* Limita el ancho máximo del botón */
+}
+
+.contact .whatsapp-button:hover {
+    background-color: #1da951;
+}
+
+.contact .contact-image img {
+    max-width: 50%; /* Ajusta el tamaño máximo de la imagen */
+    height: auto; /* Mantiene la proporción de la imagen */
+    max-width: 50%; /* Ajusta el tamaño de la imagen */
+    border: 3px solid #fff; /* Añade un borde de 3px sólido blanco */
+    border-radius: 10px; /* Añade un borde redondeado */
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out; /* Transición para transform y borde */
+}
+
+.contact .contact-image img:hover {
+    transform: scale(1.1); /* Escala la imagen al hacer hover */
+    border-color: #da6199; /* Cambia el color del borde al hacer hover */
+}
+
+/* New Styles: Footer */
+.footer {
+    background-color: #111;
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0.5rem 0;
+}
+
+.footer .social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer .social-links img {
+    width: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.footer .social-links img:hover {
+    transform: scale(1.1);
+}
